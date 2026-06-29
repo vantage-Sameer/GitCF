@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>1455C - Ping Pong</title>
+</head>
+<body>
+
+<h1>1455C - Ping Pong</h1>
+
+<details>
+    <summary><b>Hint 1</b></summary>
+    Think about whether leaving the ball can ever be beneficial.
+</details>
+
+<br>
+
+<details>
+    <summary><b>Hint 2</b></summary>
+    What happens to both players' scores if you voluntarily stop?
+</details>
+
+<br>
+
+<details>
+    <summary><b>Hint 3</b></summary>
+    If every player always hits whenever possible, how does the game proceed?
+</details>
+
+<hr>
+
+<h2>Explanation</h2>
+
+<details>
+     <summary><b>Click here for explanation.</b></summary>
+<pre style="font-family: Arial, sans-serif";>
+    The key observation is that <b>leaving the ball is never an optimal move while you still have stamina</b>.
+
+    Suppose it's your turn. You have two choices:
+
+    1. Hit the ball.
+    2. Leave the ball and lose the current rally.
+
+    Now think about what happens if you choose to leave.
+
+    First, it doesn't increase your own score. In fact, you immediately lose the current rally, so your opponent gains a point.
+
+    <b>Could leaving at least improve your future position? </b>
+    Again, no. Saving one stamina doesn't give you any real advantage because your opponent must spend one stamina to serve the next rally anyway. 
+    So you haven't reduced your opponent's future score or created any better opportunity for yourself.
+
+    In short, leaving the ball neither improves your score nor reduces your opponent's score—it only gives away the current point.
+
+    Hence, as long as a player has stamina left, the optimal strategy is always to hit the ball.
+
+    Once this observation is made, the rest of the game becomes completely deterministic. 
+    Both players simply keep hitting until one of them runs out of stamina. 
+
+    The only thing to remember is that <b>Alice serves first, so she spends one stamina before the first rally even begins</b>. 
+
+    Therefore, the effective stamina becomes (x - 1, y), which directly gives the final answer.
+
+</pre>
+</details>
+
+</body>
+</html>
